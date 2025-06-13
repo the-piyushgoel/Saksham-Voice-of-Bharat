@@ -46,7 +46,7 @@ function App() {
       education: 'Education',
       mentorship: 'Mentorship',
       aiSupport: 'AI Support',
-      stories: 'Success Stories',
+      stories: 'Suno meri kahani..(Success Stories)',
       about: 'About Us',
       contact: 'Contact',
       getStarted: 'Get Started',
