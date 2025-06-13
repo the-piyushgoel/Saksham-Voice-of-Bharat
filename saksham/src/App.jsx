@@ -46,7 +46,7 @@ function App() {
       education: 'Education',
       mentorship: 'Mentorship',
       aiSupport: 'AI Support',
-      stories: 'Success Stories',
+      stories: 'Suno meri kahani..(Success Stories)',
       about: 'About Us',
       contact: 'Contact',
       getStarted: 'Get Started',
@@ -91,7 +91,12 @@ function App() {
 
   const handleFeatureClick = (feature) => {
     toast({
-      title: "🚧 यह सुविधा अभी तक लागू नहीं की गई है—लेकिन चिंता न करें! आप इसे अपने अगले प्रॉम्प्ट में अनुरोध कर सकते हैं! 🚀",
+      title: (<>
+        🚧 यह सुविधा अभी तक लागू नहीं की गई है—लेकिन चिंता न करें!
+        <br />
+        This feature is not implemented yet—but don’t worry! You can request it in your next prompt! 🚀
+      </>),
+ 
       duration: 3000,
     });
   };
