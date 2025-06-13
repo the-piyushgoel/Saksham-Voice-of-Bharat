@@ -20,8 +20,10 @@ After cloning the repo, To run the project follow the following steps and run al
 </IfModule>
 
 <IfModule mod_headers.c>
+ 
   	Header set X-Powered-By "Hostinger Horizons"
 </IfModule>
+
 '@ | Set-Content -Path "public\.htaccess"
 
 •	npm install
