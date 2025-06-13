@@ -9,7 +9,9 @@ After cloning the repo, To run the project follow the following steps and run al
 •	New-Item -Path "public\.htaccess" -ItemType "File"
 
 •	@'
+
 <IfModule mod_rewrite.c>
+ 
  	 RewriteEngine On
  	 RewriteBase /
   	RewriteCond %{REQUEST_FILENAME} !-f
