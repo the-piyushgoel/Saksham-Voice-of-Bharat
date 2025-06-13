@@ -1,14 +1,14 @@
 After cloning the repo, To run the project follow the following steps and run all the commands on in terminal step by step:
 
-•	cd .\CodeForBharat\
+1)	cd .\CodeForBharat\
 
-•	cd .\saksham\
+2)	cd .\saksham\
 
-•	mkdir public
+3)	mkdir public
 
-•	New-Item -Path "public\.htaccess" -ItemType "File"
+4)	New-Item -Path "public\.htaccess" -ItemType "File"
 
-•	@'
+5)	@'
 
 <IfModule mod_rewrite.c>
  
@@ -24,8 +24,9 @@ After cloning the repo, To run the project follow the following steps and run al
   	Header set X-Powered-By "Hostinger Horizons"
 </IfModule>
 
-'@ | Set-Content -Path "public\.htaccess"
+'@ |
+Set-Content -Path "public\.htaccess"
 
-•	npm install
+6)	npm install
 
-•	npm run dev
+7)	npm run dev
