@@ -94,7 +94,7 @@ function App() {
       title: (<>
         🚧 यह सुविधा अभी तक लागू नहीं की गई है—लेकिन चिंता न करें!
         <br />
-        This feature is not implemented yet—but don’t worry! You can request it in your next prompt! 🚀
+        This feature is not implemented yet—but don't worry! You can request it in your next prompt! 🚀
       </>),
  
       duration: 3000,
