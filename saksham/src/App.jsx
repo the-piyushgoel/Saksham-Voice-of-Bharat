@@ -89,17 +89,29 @@ function App() {
 
   const t = languages[currentLanguage];
 
-  const handleFeatureClick = (feature) => {
-    toast({
-      title: (<>
+ const handleFeatureClick = (feature) => {
+  if (feature === t.aiSupport) {
+    // 🎯 Open the chatbot in a new tab
+    window.open(
+      "https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/02/12/20250702124622-1P26ESV0.json",
+      "_blank"
+    );
+    return;
+  }
+
+  // Default toast for other features
+  toast({
+    title: (
+      <>
         🚧 यह सुविधा अभी तक लागू नहीं की गई है—लेकिन चिंता न करें!
         <br />
-        This feature is not implemented yet—but don't worry! You can request it in your next prompt! 🚀
-      </>),
- 
-      duration: 3000,
-    });
-  };
+        This feature is not implemented yet—but don’t worry! You can request it in your next prompt! 🚀
+      </>
+    ),
+    duration: 3000,
+  });
+};
+
 
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
