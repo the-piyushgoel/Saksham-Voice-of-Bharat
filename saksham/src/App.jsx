@@ -634,8 +634,17 @@ function App() {
           >
 
             
-            <Button 
+{/*             <Button 
               onClick={() =>  handleFeatureClick('more-stories')}
+              size="lg"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
+            >
+              View More Stories
+              <ChevronRight className="ml-2 w-5 h-5" />
+            </Button> */}
+
+            <Button 
+              onClick={() => window.location.href = '/story.html'}
               size="lg"
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
             >
