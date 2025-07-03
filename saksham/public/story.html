@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triumph Over Challenges - Inspiring Success Stories</title>
+    <meta name="description" content="Inspiring success stories of physically challenged individuals who have overcome obstacles to achieve remarkable things">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <h1 class="logo">Triumph Stories</h1>
+                <!-- <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#stories" class="nav-link">Stories</a>
+                    <a href="#about" class="nav-link">About</a>
+                </div> -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Triumph Over Challenges</h1>
+                <p class="hero-subtitle">Inspiring stories of resilience, determination, and extraordinary achievements</p>
+                <p class="hero-description">
+                    Discover the remarkable journeys of individuals who have turned their challenges into stepping stones for success, 
+                    inspiring millions around the world with their courage and achievements.
+                </p>
+                <button class="cta-button" onclick="scrollToStories()">Explore Stories</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/7876050/pexels-photo-7876050.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Person in wheelchair reaching for the sky" />
+            </div>
+        </section>
+
+        <section id="stories" class="stories-section">
+            <div class="container">
+                <h2 class="section-title">Inspiring Success Stories</h2>
+                <p class="section-subtitle">Meet extraordinary individuals who have redefined what's possible</p>
+                
+                
+
+                <div class="stories-grid" id="storiesGrid">
+                    <!-- Stories will be dynamically populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-titl">Share your own story</h2>
+                <br>
+                <button class="cta-button" style="text-align: center;" >Mail us!</button>
+                <!-- <div class="about-content">
+                    
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+        </div>
+    </footer>
+
+    <!-- Modal for story details -->
+    <div id="storyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modalBody">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
