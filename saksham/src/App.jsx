@@ -299,7 +299,7 @@ function App() {
                     <Play className="mr-2 w-5 h-5" />
                     {t.watchVideo}
                   </Button>
-                  <Button 
+                  {/* <Button 
                     variant="outline" 
                     size="lg"
                     onClick={() => handleFeatureClick('audio')}
@@ -307,7 +307,16 @@ function App() {
                   >
                     <Headphones className="mr-2 w-5 h-5" />
                     {t.listenAudio}
-                  </Button>
+                  </Button> */}
+                  <Button 
+              onClick={() => window.location.href = 'https://text2voice-1.onrender.com/'}
+              variant="outline"
+              size="lg"
+              className="border-green-300 text-green-600 hover:bg-green-50"
+            >
+              Listen Textbooks
+              <ChevronRight className="ml-2 w-5 h-5" />
+            </Button>
                 </div>
               </div>
             </motion.div>
