@@ -807,14 +807,23 @@ function App() {
                 Start Your Journey
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button 
+              {/* <Button 
                 onClick={() => handleFeatureClick('demo')}
                 variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg"
               >
                 Request Demo
+              </Button> */}
+              <Button 
+                onClick={() => handleFeatureClick('register')}
+                size="lg"
+                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+              >
+                Request Demo
+                <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
+              
             </div>
           </motion.div>
         </div>
@@ -882,7 +891,7 @@ function App() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Saksham: Voices of Bharat. Made with ❤️ for an inclusive India.</p>
+            <p>&copy; 2024 Saksham: Voices of Bharat. Made with ❤️ for an inclusive India by Team NextGen Bharat.</p>
           </div>
         </div>
       </footer>
