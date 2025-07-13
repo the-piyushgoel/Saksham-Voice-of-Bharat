@@ -4,15 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Toaster } from '@/components/ui/toaster';
 import { useToast } from '@/components/ui/use-toast';
-import { 
-  Heart, 
-  Users, 
-  BookOpen, 
-  MessageCircle, 
-  Star, 
-  Globe, 
-  Volume2, 
-  Eye, 
+import {
+  Heart,
+  Users,
+  BookOpen,
+  MessageCircle,
+  Star,
+  Globe,
+  Volume2,
+  Eye,
   Accessibility,
   Menu,
   X,
@@ -89,16 +89,16 @@ function App() {
 
   const t = languages[currentLanguage];
 
- const handleFeatureClick = (feature) => {
-  if (feature === t.aiSupport) {
-    // 🎯 Open the chatbot in a new tab
-    window.open(
-      "https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/02/12/20250702124622-1P26ESV0.json",
-      "_blank"
-    );
-    return;
-  }
-  if (feature === t.mentorship) {
+  const handleFeatureClick = (feature) => {
+    if (feature === t.aiSupport) {
+      // 🎯 Open the chatbot in a new tab
+      window.open(
+        "https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/02/12/20250702124622-1P26ESV0.json",
+        "_blank"
+      );
+      return;
+    }
+       if (feature === t.mentorship) {
     // 🎯 Open the career counselling mentorship link in a new tab
     window.open(
       "https://prachi9506.github.io/career-counselling-/",
@@ -107,18 +107,18 @@ function App() {
     return;
   }
   
-  // Default toast for other features
-  toast({
-    title: (
-      <>
-        🚧 यह सुविधा अभी तक लागू नहीं की गई है—लेकिन चिंता न करें!
-        <br />
-        This feature is not implemented yet—but don’t worry! You can request it in your next prompt! 🚀
-      </>
-    ),
-    duration: 3000,
-  });
-};
+    // Default toast for other features
+    toast({
+      title: (
+        <>
+          🚧 यह सुविधा अभी तक लागू नहीं की गई है—लेकिन चिंता न करें!
+          <br />
+          This feature is not implemented yet—but don’t worry! You can request it in your next prompt! 🚀
+        </>
+      ),
+      duration: 3000,
+    });
+  };
 
 
   const scrollToSection = (sectionId) => {
@@ -154,7 +154,7 @@ function App() {
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-orange-200 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <motion.div 
+            <motion.div
               className="flex items-center space-x-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -174,14 +174,13 @@ function App() {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`text-sm font-medium transition-colors hover:text-orange-600 ${
-                    activeSection === section ? 'text-orange-600' : 'text-gray-700'
-                  }`}
+                  className={`text-sm font-medium transition-colors hover:text-orange-600 ${activeSection === section ? 'text-orange-600' : 'text-gray-700'
+                    }`}
                 >
                   {t[section] || section.charAt(0).toUpperCase() + section.slice(1)}
                 </button>
               ))}
-              
+
               <select
                 value={currentLanguage}
                 onChange={(e) => setCurrentLanguage(e.target.value)}
@@ -191,7 +190,7 @@ function App() {
                 <option value="hi">हिंदी</option>
               </select>
 
-              <Button 
+              <Button
                 onClick={() => handleFeatureClick('join')}
                 className="bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-white"
               >
@@ -242,7 +241,7 @@ function App() {
                     <option value="hi">हिंदी</option>
                   </select>
                 </div>
-                <Button 
+                <Button
                   onClick={() => handleFeatureClick('join')}
                   className="w-full bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-white"
                 >
@@ -286,35 +285,38 @@ function App() {
               <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
                 {t.description}
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button 
-                  onClick={() => handleFeatureClick('join')}
+                <Button
+                  onClick={() => window.location.href = 'https://text2voice-1.onrender.com/'}
+                  variant="outline"
+                  size="lg"
+                  className="border-green-300 text-green-600 hover:bg-green-50"
+                >
+                  Listen Textbooks
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </Button>
+
+
+                <Button
+                  onClick={() => window.location.href = 'https://docs.google.com/forms/d/1SyD6tfj4ljiSGC8sBZwf3QoQSrkgUbWqBFbAgwyvMq0/edit'}
+                  variant="outline"
                   size="lg"
                   className="bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-white px-8 py-3 text-lg animate-pulse-glow"
                 >
-                  {t.cta}
+                  Join Our Community
                   <ChevronRight className="ml-2 w-5 h-5" />
                 </Button>
-                
+
                 <div className="flex gap-2">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     size="lg"
                     onClick={() => handleFeatureClick('video')}
                     className="border-orange-300 text-orange-600 hover:bg-orange-50"
                   >
                     <Play className="mr-2 w-5 h-5" />
                     {t.watchVideo}
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    onClick={() => handleFeatureClick('audio')}
-                    className="border-green-300 text-green-600 hover:bg-green-50"
-                  >
-                    <Headphones className="mr-2 w-5 h-5" />
-                    {t.listenAudio}
                   </Button>
                 </div>
               </div>
@@ -328,10 +330,10 @@ function App() {
               className="relative"
             >
               <div className="relative mx-auto max-w-4xl">
-                <img  
-                  className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-2xl animate-float" 
+                <img
+                  className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-2xl animate-float"
                   alt="Diverse group of specially-abled individuals using technology and learning together"
-                 src="https://images.unsplash.com/photo-1699263644834-be3f11c8e9a8" />
+                  src="https://images.unsplash.com/photo-1699263644834-be3f11c8e9a8" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
               </div>
             </motion.div>
@@ -434,10 +436,10 @@ function App() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img  
-                className="w-full h-80 object-cover rounded-2xl shadow-xl" 
+              <img
+                className="w-full h-80 object-cover rounded-2xl shadow-xl"
                 alt="AI-powered learning platform interface showing multilingual accessibility features"
-               src="https://images.unsplash.com/photo-1675557009483-e6cf3867976b" />
+                src="https://images.unsplash.com/photo-1675557009483-e6cf3867976b" />
             </motion.div>
 
             <motion.div
@@ -552,8 +554,8 @@ function App() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   className="text-gray-700 hover:text-gray-900 p-0 h-auto font-medium group-hover:translate-x-1 transition-transform"
                 >
                   {t.learnMore}
@@ -616,10 +618,10 @@ function App() {
                 className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="mb-4">
-                  <img  
-                    className="w-20 h-20 rounded-full object-cover mx-auto mb-4" 
+                  <img
+                    className="w-20 h-20 rounded-full object-cover mx-auto mb-4"
                     alt={`Portrait of ${story.name}`}
-                   src="https://images.unsplash.com/photo-1626447857058-2ba6a8868cb5" />
+                    src="https://images.unsplash.com/photo-1626447857058-2ba6a8868cb5" />
                 </div>
                 <div className="text-center">
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{story.name}</h3>
@@ -640,14 +642,29 @@ function App() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Button 
-              onClick={() => handleFeatureClick('more-stories')}
+
+
+            {/*             <Button 
+              onClick={() =>  handleFeatureClick('more-stories')}
+              size="lg"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
+            >
+              View More Stories
+              <ChevronRight className="ml-2 w-5 h-5" />
+            </Button> */}
+
+            <Button
+              onClick={() => window.location.href = '/story.html'}
               size="lg"
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
             >
               View More Stories
               <ChevronRight className="ml-2 w-5 h-5" />
             </Button>
+
+
+
+
           </motion.div>
         </div>
       </section>
@@ -730,7 +747,7 @@ function App() {
               <p className="text-lg text-gray-600 mb-8">
                 Our mission is to break down barriers, build bridges, and create a more inclusive India where 3 crore+ specially-abled individuals can realize their full potential.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { icon: Accessibility, title: "Fully Accessible", description: "Designed with accessibility at its core" },
@@ -757,10 +774,10 @@ function App() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img  
-                className="w-full h-96 object-cover rounded-2xl shadow-xl" 
+              <img
+                className="w-full h-96 object-cover rounded-2xl shadow-xl"
                 alt="Team of diverse individuals working together on inclusive technology solutions"
-               src="https://images.unsplash.com/photo-1686545684554-2694c9cee9e6" />
+                src="https://images.unsplash.com/photo-1686545684554-2694c9cee9e6" />
             </motion.div>
           </div>
         </div>
@@ -781,9 +798,9 @@ function App() {
             <p className="text-xl text-white/90 mb-8">
               Be part of a movement that's transforming lives across India. Your voice matters, your story inspires, and your potential is limitless.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
                 onClick={() => handleFeatureClick('register')}
                 size="lg"
                 className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
@@ -791,14 +808,15 @@ function App() {
                 Start Your Journey
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button 
-                onClick={() => handleFeatureClick('demo')}
-                variant="outline"
+              <Button
+                onClick={() => handleFeatureClick('register')}
                 size="lg"
-                className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg"
+                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
               >
                 Request Demo
+                <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
+
             </div>
           </motion.div>
         </div>
@@ -837,7 +855,7 @@ function App() {
               <ul className="space-y-2 text-gray-400">
                 {['Education', 'Community', 'Mentorship', 'AI Support'].map((item) => (
                   <li key={item}>
-                    <button 
+                    <button
                       onClick={() => handleFeatureClick(item.toLowerCase())}
                       className="hover:text-white transition-colors"
                     >
@@ -853,7 +871,7 @@ function App() {
               <ul className="space-y-2 text-gray-400">
                 {['Help Center', 'Accessibility', 'Privacy Policy', 'Terms of Service'].map((item) => (
                   <li key={item}>
-                    <button 
+                    <button
                       onClick={() => handleFeatureClick(item.toLowerCase().replace(' ', '-'))}
                       className="hover:text-white transition-colors"
                     >
@@ -866,7 +884,7 @@ function App() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Saksham: Voices of Bharat. Made with ❤️ for an inclusive India.</p>
+            <p>&copy; 2024 Saksham: Voices of Bharat. Made with ❤️ for an inclusive India by Team NextGen Bharat.</p>
           </div>
         </div>
       </footer>
