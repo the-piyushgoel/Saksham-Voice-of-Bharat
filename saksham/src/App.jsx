@@ -106,7 +106,16 @@ function App() {
     );
     return;
   }
-  
+
+ if (feature === t.community) {
+    // 🎯 Open the Google Form for community feedback
+    window.open(
+      "https://docs.google.com/forms/d/1SyD6tfj4ljiSGC8sBZwf3QoQSrkgUbWqBFbAgwyvMq0/edit",
+      "_blank"
+    );
+    return;
+  }
+
     // Default toast for other features
     toast({
       title: (
