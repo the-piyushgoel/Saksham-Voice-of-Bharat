@@ -434,6 +434,85 @@ function App() {
         </div>
       </section>
 
+            {/* Features Section */}
+      <section id="features" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {t.features}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive tools designed for accessibility and empowerment
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+                {
+                icon: MessageCircle,
+                title: t.aiSupport,
+                description: "24/7 AI assistance for guidance and support",
+                color: "from-purple-500 to-pink-500",
+                bgColor: "from-purple-50 to-pink-50"
+              },
+               {
+                icon: UserCheck,
+                title: t.mentorship,
+                description: "Learn from successful role models and achievers",
+                color: "from-orange-500 to-red-500",
+                bgColor: "from-orange-50 to-red-50"
+              },
+               {
+                icon: Users,
+                title: t.community,
+                description: "Connect with peers and share experiences safely",
+                color: "from-green-500 to-teal-500",
+                bgColor: "from-green-50 to-teal-50"
+              },
+              {
+                icon: BookOpen,
+                title: t.education,
+                description: "NCERT-aligned voice-based education in local languages",
+                color: "from-blue-500 to-purple-500",
+                bgColor: "from-blue-50 to-purple-50"
+              },
+        
+           
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-gradient-to-br ${feature.bgColor} p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group`}
+                onClick={() => handleFeatureClick(feature.title)}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <Button
+                  variant="ghost"
+                  className="text-gray-700 hover:text-gray-900 p-0 h-auto font-medium group-hover:translate-x-1 transition-transform"
+                >
+                  {t.learnMore}
+                  <ChevronRight className="ml-1 w-4 h-4" />
+                </Button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Solution Section */}
       <section id="solution" className="py-16 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -514,83 +593,6 @@ function App() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t.features}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive tools designed for accessibility and empowerment
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-                {
-                icon: MessageCircle,
-                title: t.aiSupport,
-                description: "24/7 AI assistance for guidance and support",
-                color: "from-purple-500 to-pink-500",
-                bgColor: "from-purple-50 to-pink-50"
-              },
-               {
-                icon: UserCheck,
-                title: t.mentorship,
-                description: "Learn from successful role models and achievers",
-                color: "from-orange-500 to-red-500",
-                bgColor: "from-orange-50 to-red-50"
-              },
-               {
-                icon: Users,
-                title: t.community,
-                description: "Connect with peers and share experiences safely",
-                color: "from-green-500 to-teal-500",
-                bgColor: "from-green-50 to-teal-50"
-              },
-              {
-                icon: BookOpen,
-                title: t.education,
-                description: "NCERT-aligned voice-based education in local languages",
-                color: "from-blue-500 to-purple-500",
-                bgColor: "from-blue-50 to-purple-50"
-              },
-        
-           
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`bg-gradient-to-br ${feature.bgColor} p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group`}
-                onClick={() => handleFeatureClick(feature.title)}
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 mb-4">{feature.description}</p>
-                <Button
-                  variant="ghost"
-                  className="text-gray-700 hover:text-gray-900 p-0 h-auto font-medium group-hover:translate-x-1 transition-transform"
-                >
-                  {t.learnMore}
-                  <ChevronRight className="ml-1 w-4 h-4" />
-                </Button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Success Stories Section */}
       <section id="stories" className="py-16 bg-gradient-to-r from-purple-50 to-pink-50">
