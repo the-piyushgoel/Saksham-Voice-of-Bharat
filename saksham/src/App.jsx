@@ -328,7 +328,7 @@ function App() {
                   <Button
                     variant="outline"
                     size="lg"
-                    onClick={() => handleFeatureClick('video')}
+                   onClick={() => window.open('https://youtu.be/fBnAMUkNM2k?feature=shared', '_blank')}
                     className="border-orange-300 text-orange-600 hover:bg-orange-50"
                   >
                     <Play className="mr-2 w-5 h-5" />
