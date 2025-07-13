@@ -106,11 +106,18 @@ function App() {
     );
     return;
   }
-
- if (feature === t.community) {
+   if (feature === t.community) {
     // 🎯 Open the Google Form for community feedback
     window.open(
       "https://docs.google.com/forms/d/1SyD6tfj4ljiSGC8sBZwf3QoQSrkgUbWqBFbAgwyvMq0/edit",
+      "_blank"
+    );
+    return;
+  }
+    if (feature === t.education) {
+    // 🎯 Education - Text-to-Voice App
+    window.open(
+      "https://text2voice-1.onrender.com/",
       "_blank"
     );
     return;
@@ -520,14 +527,21 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {
-                icon: BookOpen,
-                title: t.education,
-                description: "NCERT-aligned voice-based education in local languages",
-                color: "from-blue-500 to-purple-500",
-                bgColor: "from-blue-50 to-purple-50"
+                {
+                icon: MessageCircle,
+                title: t.aiSupport,
+                description: "24/7 AI assistance for guidance and support",
+                color: "from-purple-500 to-pink-500",
+                bgColor: "from-purple-50 to-pink-50"
               },
-              {
+               {
+                icon: UserCheck,
+                title: t.mentorship,
+                description: "Learn from successful role models and achievers",
+                color: "from-orange-500 to-red-500",
+                bgColor: "from-orange-50 to-red-50"
+              },
+               {
                 icon: Users,
                 title: t.community,
                 description: "Connect with peers and share experiences safely",
@@ -535,19 +549,14 @@ function App() {
                 bgColor: "from-green-50 to-teal-50"
               },
               {
-                icon: UserCheck,
-                title: t.mentorship,
-                description: "Learn from successful role models and achievers",
-                color: "from-orange-500 to-red-500",
-                bgColor: "from-orange-50 to-red-50"
+                icon: BookOpen,
+                title: t.education,
+                description: "NCERT-aligned voice-based education in local languages",
+                color: "from-blue-500 to-purple-500",
+                bgColor: "from-blue-50 to-purple-50"
               },
-              {
-                icon: MessageCircle,
-                title: t.aiSupport,
-                description: "24/7 AI assistance for guidance and support",
-                color: "from-purple-500 to-pink-500",
-                bgColor: "from-purple-50 to-pink-50"
-              }
+        
+           
             ].map((feature, index) => (
               <motion.div
                 key={index}
