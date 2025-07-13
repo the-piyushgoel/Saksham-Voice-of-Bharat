@@ -98,7 +98,15 @@ function App() {
     );
     return;
   }
-
+  if (feature === t.mentorship) {
+    // 🎯 Open the career counselling mentorship link in a new tab
+    window.open(
+      "https://prachi9506.github.io/career-counselling-/",
+      "_blank"
+    );
+    return;
+  }
+  
   // Default toast for other features
   toast({
     title: (
