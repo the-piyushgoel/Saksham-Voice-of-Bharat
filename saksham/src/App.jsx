@@ -98,23 +98,6 @@ function App() {
       );
       return;
     }
-       if (feature === t.mentorship) {
-    // 🎯 Open the career counselling mentorship link in a new tab
-    window.open(
-      "https://prachi9506.github.io/career-counselling-/",
-      "_blank"
-    );
-    return;
-  }
-
- if (feature === t.community) {
-    // 🎯 Open the Google Form for community feedback
-    window.open(
-      "https://docs.google.com/forms/d/1SyD6tfj4ljiSGC8sBZwf3QoQSrkgUbWqBFbAgwyvMq0/edit",
-      "_blank"
-    );
-    return;
-  }
 
     // Default toast for other features
     toast({
@@ -199,12 +182,19 @@ function App() {
                 <option value="hi">हिंदी</option>
               </select>
 
-              <Button
+              {/* <Button
                 onClick={() => handleFeatureClick('join')}
                 className="bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-white"
               >
                 {t.getStarted}
-              </Button>
+              </Button> */}
+
+              <Button
+                  onClick={() => window.location.href = 'https://docs.google.com/forms/d/1SyD6tfj4ljiSGC8sBZwf3QoQSrkgUbWqBFbAgwyvMq0/edit'}
+                  className="bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-white"
+                >
+                  {t.getStarted}
+                </Button>
             </div>
 
             {/* Mobile menu button */}
@@ -251,8 +241,8 @@ function App() {
                   </select>
                 </div>
                 <Button
-                  onClick={() => handleFeatureClick('join')}
-                  className="w-full bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-white"
+                  onClick={() => window.location.href = 'https://docs.google.com/forms/d/1SyD6tfj4ljiSGC8sBZwf3QoQSrkgUbWqBFbAgwyvMq0/edit'}
+                  className="bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-white"
                 >
                   {t.getStarted}
                 </Button>
@@ -810,13 +800,14 @@ function App() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => handleFeatureClick('register')}
-                size="lg"
-                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
-              >
-                Start Your Journey
-                <ChevronRight className="ml-2 w-5 h-5" />
-              </Button>
+                  onClick={() => window.location.href = 'https://docs.google.com/forms/d/1SyD6tfj4ljiSGC8sBZwf3QoQSrkgUbWqBFbAgwyvMq0/edit'}
+                  variant="outline"
+                  size="lg"
+                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+                >
+                  Start Your Journey
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </Button>
               <Button
                 onClick={() => handleFeatureClick('register')}
                 size="lg"
