@@ -49,7 +49,7 @@ Keeping this challenge at the heart of our mission, a passionate group of **firs
 
 ## 👨‍💻 Team NextGen Bharat
 
-👩‍💻 **Prachi Sharma**  
+- 👩‍💻 **Prachi Sharma**  
   [GitHub](https://github.com/prachi9506) | [LinkedIn](https://www.linkedin.com/in/prachisharma95/)
 
 - 👩‍💻 **Apurva Jain**  
