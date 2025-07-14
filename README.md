@@ -1,4 +1,4 @@
-# Saksham: Voice of Bharat 🇮🇳
+# Saksham: Voice of Bharat
 
 > **Empowering the Differently-Abled with Technology, Compassion, and Community**
 
